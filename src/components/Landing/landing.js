@@ -7,9 +7,9 @@ const LandingPage = () => (
             <input type="email" placeholder="Email Address" />
             <input type="password" placeholder="Password" />
             <button>LOG IN</button>
-            <a href="#">Forgot Password</a>
+            <a href="/pw-forget">Forgot Password</a>
 
-            <span>Don't have an account?<a href="#">Sign Up</a></span>
+            <span>Don't have an account?<a href="/signup">Sign Up</a></span>
         </form>
 
     </div>
