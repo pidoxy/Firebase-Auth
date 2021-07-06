@@ -15,7 +15,6 @@ import AdminPage from './components/Admin/admin';
 import * as ROUTES from './components/constants/routes';
 
 import { withAuthentication } from './components/Session';
-
   const App = () => (
         <Router>
           <div>

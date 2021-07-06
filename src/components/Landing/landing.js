@@ -2,6 +2,7 @@ import React from 'react';
 
 const LandingPage = () => (
     <div>
+        <div className={'landing-image'} ></div>
         <h1>Login</h1>
         <form>
             <input type="email" placeholder="Email Address" />
