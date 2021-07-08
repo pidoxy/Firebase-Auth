@@ -19,7 +19,6 @@ import { withAuthentication } from './components/Session';
         <Router>
           <div>
             <Navigation />
-            <hr />
 
             <Route exact path={ROUTES.LANDING} component={LandingPage} />
             <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
