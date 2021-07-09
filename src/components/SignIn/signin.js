@@ -25,8 +25,6 @@ import Container from '@material-ui/core/Container';
 const SignInPage = () => (
   <div>
     <SignInForm />
-    <PasswordForgetLink />
-    <SignUpLink />
   </div>
 );
 
@@ -130,18 +128,11 @@ class SignInFormBase extends Component {
               >
                 Sign In
               </Button>
-              {error && <p style={{color: 'red'}}>{error.message}</p>}
+              {error && <p style={{ color: 'red' }}>{error.message}</p>}
+
               <Grid container>
-                <Grid item xs>
-                  <Link href={ROUTES.PASSWORD_FORGET} variant="body2">
-                    Forgot password?
-                  </Link>
-                </Grid>
-                <Grid item>
-                  <Link href={ROUTES.SIGN_UP} variant="body2">
-                    {"Don't have an account? Sign Up"}
-                  </Link>
-                </Grid>
+                  <PasswordForgetLink />
+                  <SignUpLink />
               </Grid>
             </form>
           </div>

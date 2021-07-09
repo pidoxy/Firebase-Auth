@@ -4,9 +4,9 @@ body{
   padding: 0;
   background-image: url('./assets/bg-1.svg');
   background-size: 100%;
+  /* background-repeat: no-repeat; */
 }
 
 .landing-image{
-  /* background-position: bottom; */
   background-image: url('./assets/img-1.svg');
 }

@@ -69,9 +69,6 @@ class PasswordForgetFormBase extends Component {
         >
           Reset My Password
         </Button>
-        {/* <button disabled={isInvalid} type="submit">
-          Reset My Password
-        </button> */}
 
         {error && <p>{error.message}</p>}
       </form>
@@ -80,16 +77,13 @@ class PasswordForgetFormBase extends Component {
 }
 
 const PasswordForgetLink = () => (
-  <p>
-    {/* <Link to={ROUTES.PASSWORD_FORGET}>Forgot Password?</Link> */}
-    <Grid container>
-      <Grid item xs>
+    // <Grid container>
+      <Grid item xs={5}>
         <Link href={ROUTES.PASSWORD_FORGET} variant="body2">
           Forgot password?
         </Link>
       </Grid>
-    </Grid>
-  </p>
+    // </Grid>
 );
 
 export default PasswordForgetPage;

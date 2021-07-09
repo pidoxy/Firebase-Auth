@@ -160,9 +160,10 @@ class SignUpFormBase extends Component {
 }
 
 const SignUpLink = () => (
-  <p>
+
+  <Grid item xs={7}>
     Don't have an account? <Link to={ROUTES.SIGN_UP}>Sign Up</Link>
-  </p>
+  </Grid>
 );
 
 const SignUpForm = withRouter(withFirebase(SignUpFormBase));
