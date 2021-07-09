@@ -1,3 +1,4 @@
+import { Container } from '@material-ui/core';
 import React, { Component } from 'react';
 
 import { withFirebase } from '../Firebase';
@@ -38,14 +39,13 @@ class AdminPage extends Component {
         const { users, loading } = this.state;
 
         return (
-            <div>
-                <h1>Admin</h1>
+            <Container align="center">
+                    <h1>Admin</h1>
 
-         {loading && <div>Loading ...</div>}
+                    {loading && <div>Loading ...</div>}
 
-                <UserList users={users} />
-            </div>
-
+                    <UserList users={users} />
+            </Container>
         );
     }
 }

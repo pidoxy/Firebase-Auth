@@ -19,16 +19,13 @@ const Navigation = () => (
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 2,
+    flexGrow: 1,
     backgroundColor: '#ffffff00',
-    // paddingRight: theme.spacing(-24),
-    paddingLeft: theme.spacing(36),
+    margin: theme.spacing(0, 0, 5, 0),
   },
   title: {
     flexGrow: 1,
-    // paddingRight: theme.spacing(2),
-    // paddingLeft: theme.spacing(2),
-  },
+  }
 
 }));
 
@@ -36,9 +33,9 @@ const NavigationAuth = () => {
   const classes = useStyles();
 
   return (
-    <AppBar className={classes.root} position="static">
+    <AppBar className={classes.root} xs={12} md={8} position="static" >
       <Toolbar>
-        <Typography variant="h6" className={classes.title}>
+        <Typography variant="h6" className={classes.title} >
           <Link to={ROUTES.LANDING}>Landing</Link>
         </Typography>
         <Typography variant="h6" className={classes.title}>
@@ -61,7 +58,7 @@ const NavigationNonAuth = () => {
   const classes = useStyles();
   return (
     <div >
-      <AppBar className={classes.root} position="static">
+      <AppBar className={classes.root} position="static" gutterBottom>
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
             <Link to={ROUTES.SIGN_IN}>Sign In</Link>
@@ -73,7 +70,6 @@ const NavigationNonAuth = () => {
       </AppBar>
 
     </div>
-
   );
 }
 

@@ -7,6 +7,8 @@ import * as ROUTES from '../constants/routes';
 import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
+import Container from '@material-ui/core/Container';
 
 const PasswordForgetPage = () => (
   <div>
@@ -52,38 +54,44 @@ class PasswordForgetFormBase extends Component {
     const isInvalid = email === '';
 
     return (
-      <form onSubmit={this.onSubmit}>
-        <input
-          name="email"
-          value={this.state.email}
-          onChange={this.onChange}
-          type="text"
-          placeholder="Email Address"
-        />
-        <Button
-          disabled={isInvalid}
-          type="submit"
-          // fullWidth
-          variant="contained"
-          color="primary"
-        >
-          Reset My Password
-        </Button>
+      <Container component="main" maxWidth="xs">
+        <form onSubmit={this.onSubmit}>
+          <TextField
+            variant="outlined"
+            margin="normal"
+            required
+            fullWidth
+            id="email"
+            value={this.state.email}
+            onChange={this.onChange}
+            label="Email Address"
+            name="email"
+            autoComplete="email"
+            autoFocus
+          />
+          <Button
+            disabled={isInvalid}
+            type="submit"
+            // fullWidth
+            variant="contained"
+            color="primary"
+          >
+            Reset My Password
+          </Button>
 
-        {error && <p>{error.message}</p>}
-      </form>
+          {error && <p>{error.message}</p>}
+        </form>
+      </Container>
     );
   }
 }
 
 const PasswordForgetLink = () => (
-    // <Grid container>
-      <Grid item xs={5}>
-        <Link href={ROUTES.PASSWORD_FORGET} variant="body2">
-          Forgot password?
-        </Link>
-      </Grid>
-    // </Grid>
+  <Grid item xs={5}>
+    <Link href={ROUTES.PASSWORD_FORGET} variant="body2">
+      Forgot password?
+    </Link>
+  </Grid>
 );
 
 export default PasswordForgetPage;

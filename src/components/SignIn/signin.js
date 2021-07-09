@@ -84,10 +84,12 @@ class SignInFormBase extends Component {
         <Container component="main" maxWidth="xs">
           <CssBaseline />
           <div >
-            <Avatar >
-              <LockOutlinedIcon />
-            </Avatar>
-            <Typography component="h1" variant="h5">Sign in</Typography>
+            <Container align="center">
+              <Avatar>
+                <LockOutlinedIcon />
+              </Avatar>
+              <Typography component="h1" variant="h5">Sign in</Typography>
+            </Container>
             <form onSubmit={this.onSubmit} >
               <TextField
                 variant="outlined"
@@ -131,8 +133,8 @@ class SignInFormBase extends Component {
               {error && <p style={{ color: 'red' }}>{error.message}</p>}
 
               <Grid container>
-                  <PasswordForgetLink />
-                  <SignUpLink />
+                <PasswordForgetLink />
+                <SignUpLink />
               </Grid>
             </form>
           </div>

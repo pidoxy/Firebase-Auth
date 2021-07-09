@@ -1,12 +1,13 @@
+import { Container, Typography } from '@material-ui/core';
 import React from 'react';
 
 import { withAuthorization } from '../Session';
 
 const HomePage = () => (
-    <div>
+    <Container align="center" >
         <h1>Home Page</h1>
-        <p>The Home Page is accessible by every signed in user.</p>
-    </div>
+        <Typography>The Home Page is accessible by every signed in user.</Typography>
+    </Container>
 );
 
 const condition = authUser => !!authUser;
